@@ -1,3 +1,22 @@
+## Testing the API Endpoints
+
+It is recommended to use [Postman](https://www.postman.com/) to test the API endpoints for this project. Postman provides an easy-to-use interface for sending requests, viewing responses, and managing collections of API calls.
+
+### How to Test with Postman
+
+1. **Start the server** using `npm run dev` or `npm start`.
+2. **Open Postman** and create a new request.
+3. Set the request method (GET, POST, PUT, DELETE) and enter the endpoint URL (e.g., `http://localhost:3000/api/items`).
+4. For POST and PUT requests, select the **Body** tab, choose **raw** and **JSON**, and enter your data (e.g., `{ "name": "Sneakers", "price": 49.99, "size": "l" }`).
+5. Click **Send** to view the response.
+6. Repeat for other endpoints as needed.
+
+You can also organize your requests into a Postman Collection for easier repeated testing.
+
+#### Alternative: curl
+
+If you prefer the command line, you can use the provided `curl` commands in this README to test the endpoints as well.
+
 # Node.js Items API Assignment
 
 ## Overview
