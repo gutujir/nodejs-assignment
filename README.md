@@ -1,6 +1,36 @@
-# Node.js Items API Assignment
+# NodeJS Assignment: Servers and APIs
 
-## Overview
+> **Notice:**  
+> This repository implements both required tasks for the NodeJS assignment:  
+> **1. Web Server (No Framework):**
+>
+> - Renders a simple student webpage at `/index.html` (or `/`).
+> - Returns a custom 404 page for any non-existent `{random}.html` route.  
+>   **2. API Server (No Framework):**
+> - Provides a RESTful API to manage inventory information (items).
+> - Supports: Create item, Get all items, Get one item, Update item, Delete item.  
+>   All features are implemented without using any web framework.
+
+---
+
+## How to Check HTML Rendering and 404 Handling(Question 1)
+
+This project includes a simple web server (built without any framework) that serves static HTML files:
+
+- When you navigate to `http://localhost:3000/index.html` (or just `http://localhost:3000/`), you will see a basic student webpage rendered from `src/public/index.html`.
+- If you navigate to any other `.html` file that does not exist (for example, `http://localhost:3000/random.html`), the server will return a custom 404 page rendered from `src/public/404.html`.
+- If you navigate to any other unknown route (such as `http://localhost:3000/apa`), the server will also return the 404 page or a not found message, depending on the implementation.
+
+**How to test:**
+
+1. Start the server with `npm run dev` or `npm start`.
+2. Open your browser and go to `http://localhost:3000/index.html` to see the student page.
+3. Try visiting a non-existent HTML page, e.g., `http://localhost:3000/doesnotexist.html` — you should see the 404 page.
+4. Try visiting a random route, e.g., `http://localhost:3000/apa` — you should see the 404 page or a not found message.
+
+This demonstrates static file serving and custom error handling without using any web framework.
+
+## Overview for inventory management(Question 2)
 
 This project is a simple RESTful API built with Node.js (no frameworks) for managing a collection of items. It demonstrates clean architecture principles by separating concerns into models, controllers, and routes. The API supports CRUD operations and serves static HTML pages for the frontend.
 
